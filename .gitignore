@@ -1,0 +1,91 @@
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+pip-wheel-metadata/
+
+# Python virtual environments
+Cutenv/
+.venv/
+venv/
+env/
+ENV/
+apps/api/Cutenv/
+apps/api/.venv/
+
+# Python packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# FastAPI / local runtime
+*.log
+logs/
+*.pid
+*.db
+*.sqlite
+*.sqlite3
+omnicut.db
+
+# Node / Vue
+node_modules/
+apps/web/node_modules/
+apps/web/dist/
+apps/web/.vite/
+apps/web/.nuxt/
+apps/web/.output/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE and editor
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Windsurf / brainstorming temporary files
+.superpowers/
+
+# Local planning and scratch files
+OmniCut-项目规划.md
+1.txt
+
+# Local generated storage
+storage/uploads/*
+storage/exports/*
+storage/vector/*
+!storage/uploads/.gitkeep
+!storage/exports/.gitkeep
+!storage/vector/.gitkeep
+
+# Reference repositories and external downloaded code
+reference/
+reference/*.zip
