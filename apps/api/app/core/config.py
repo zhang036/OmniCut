@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     database_url: str = Field("mysql+pymysql://root:password@127.0.0.1:3306/omnicut?charset=utf8mb4", validation_alias="DATABASE_URL")
     llm_base_url: str = Field("https://api.deepseek.com", validation_alias="LLM_BASE_URL")
     llm_api_key: str = Field("", validation_alias="LLM_API_KEY")
-    llm_model: str = Field("deepseek-v4-pro", validation_alias="LLM_MODEL")
+    llm_model: str = Field("deepseek-v4-flash", validation_alias="LLM_MODEL")
 
     model_config = SettingsConfigDict(env_file=(".env", "../../.env"), env_file_encoding="utf-8", extra="ignore")
 

@@ -3,6 +3,7 @@ from sqlalchemy.engine import URL, make_url
 
 from app.core.config import settings
 from app.db.base import Base
+from app.db.schema import ensure_history_schema
 
 
 def get_database_name(database_url: str) -> str:
@@ -36,6 +37,7 @@ def create_database_if_not_exists(database_url: str) -> None:
 def create_tables(database_url: str) -> None:
     engine = create_engine(database_url)
     Base.metadata.create_all(bind=engine)
+    ensure_history_schema(engine)
     engine.dispose()
 
 
